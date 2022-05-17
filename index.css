@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Dark Theme*
+--bgBottom: hsl(230, 17%, 14%);
+--bgTop: hsl(232, 19%, 15%);
+--bgCard: hsl(228, 28%, 20%);
+--textCard: hsl(228, 34%, 66%);
+--text: hsl(0, 0%, 100%);
+
+/* Light Theme*
+--bgBottom: hsl(0, 0%, 100%);
+--bgTop: hsl(225, 100%, 98%);
+--bgCard: hsl(227, 47%, 96%);
+--text: black;
+--textCard: hsl(228, 12%, 44%);
+/* - Very Dark Blue (Text): hsl(230, 17%, 14%);
+
+
+/* Dark Theme*
+/*- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)*
+
+/* Light Theme*
+/*- Toggle: hsl(230, 22%, 74%)*
+/*- Lime Green: hsl(163, 72%, 41%)
+/*- Bright Red: hsl(356, 69%, 56%)
+/*
+/*- Facebook: hsl(208, 92%, 53%)
+/*- Twitter: hsl(203, 89%, 53%)
+/*- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+/*- YouTube: hsl(348, 97%, 39%)
+*/
+
+/* .light{
+
+}
+.dark{
+
+} */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+/* body{
+    background-color: var(--test);
+} */
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
