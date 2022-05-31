@@ -10,8 +10,10 @@
 /* Decrease Increase */
 --lime-green: hsl(163, 72%, 41%);
 --bright-red: hsl(356, 69%, 56%);
+}
 
 /* Light Theme */
+[data-theme=light]{
 --bgBottom: hsl(0, 0%, 100%);
 --bgTop: hsl(225, 100%, 98%);
 --color4: hsl(230, 17%, 14%);
@@ -28,17 +30,7 @@
 --color3: hsl(228, 28%, 20%);
 --color2: hsl(228, 34%, 66%);
 --color1: hsl(0, 0%, 100%); 
-
 }
-
-/* Dark Theme*
-/*- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)*
-
-/* Light Theme*
-/*- Toggle: hsl(230, 22%, 74%)*/
-
-
-
 
 
 *{
@@ -80,6 +72,47 @@ header .toggle{
     padding: 1rem 0;
 
 }
+
+.switch {
+    --button-width: 3em;
+    --button-height: 1.5em;
+    --toggle-diameter: 1.2em;
+    --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+    --color-light: hsl(230, 22%, 74%);
+    --color-dark: linear-gradient(to right, #378fe6,#3eda82);
+}
+.slider {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-light);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+}
+.slider::after {
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: var(--color3);
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    transition: 0.3s all ease-in-out;
+}
+.switch input[type="checkbox"]:checked + .slider {
+    background: var(--color-dark);
+}
+.switch input[type="checkbox"]:checked + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+}
+.switch input[type="checkbox"] {
+    display: none;
+}
+   
+
 @media screen and (min-width: 500px) {
     header{
         flex-direction: row;
@@ -88,6 +121,12 @@ header .toggle{
     }
     header .heading{
         border-bottom: none;
+    }
+    header .heading, .toggle > p{
+        margin-right: 1rem;
+    } 
+    header .toggle{
+        align-items: center;
     }
 }
 
